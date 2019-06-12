@@ -8,6 +8,7 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
+import { BioLayout, BioWrap } from "../styles/styles"
 
 import { rhythm, scale } from "../utils/typography"
 
@@ -17,15 +18,9 @@ function Bio() {
       query={bioQuery}
       render={data => {
         const { author } = data.site.siteMetadata
-        const { twitter } = data.site.siteMetadata.social
-        const { instagram } = data.site.siteMetadata.social
-
+        const { twitter, github, linkedin } = data.site.siteMetadata.social
         return (
-          <div
-            style={{
-              display: `flex`,
-            }}
-          >
+          <BioLayout>
             <Image
               fixed={data.avatar.childImageSharp.fixed}
               alt={author}
@@ -39,22 +34,19 @@ function Bio() {
                 borderRadius: `50%`,
               }}
             />
-            <div>
-              <strong>{author}</strong>
-              <p
-                style={{
-                  ...scale(-1 / 5),
-                }}
-              >
-                I enjoy the process of building a product from 0 to 1.
-                <br />
+            <BioWrap>
+              Hi! My name is <strong>{author}</strong>.
+              <br />
+              I'm a Designer and Front End Developer.
+              <br />
+              <section>
                 You can connect with me via{" "}
-                <a href={`https://twitter.com/${twitter}`}>Twitter</a> or if you
-                like to look at good photos,{" "}
-                <a href={`https://instagram.com/${instagram}`}>Instagram</a>.
-              </p>
-            </div>
-          </div>
+                <a href={`https://twitter.com/${twitter}`}>Twitter</a>,{" "}
+                <a href={`https://github.com/${github}`}>Github</a>,{" "}
+                <a href={`https://linkedin.com/in/${linkedin}`}>Linkedin</a>{" "}
+              </section>
+            </BioWrap>
+          </BioLayout>
         )
       }}
     />
@@ -65,7 +57,7 @@ const bioQuery = graphql`
   query BioQuery {
     avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
       childImageSharp {
-        fixed(width: 50, height: 50) {
+        fixed(width: 100, height: 100) {
           ...GatsbyImageSharpFixed
         }
       }
@@ -75,7 +67,8 @@ const bioQuery = graphql`
         author
         social {
           twitter
-          instagram
+          github
+          linkedin
         }
       }
     }

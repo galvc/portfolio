@@ -39,12 +39,7 @@ class Layout extends React.Component {
     )
 
     return (
-      <div
-        style={{
-          marginLeft: `auto`,
-          marginRight: `auto`,
-        }}
-      >
+      <div>
         <Headroom>
           <header>{header}</header>
         </Headroom>

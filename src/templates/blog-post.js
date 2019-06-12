@@ -12,7 +12,7 @@ import ShortBio from "../components/ShortBio"
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
-    const { title, disqusShortname } = this.props.data.site.siteMetadata
+    const { title } = this.props.data.site.siteMetadata
     const maxWidth = rhythm(27)
     return (
       <Layout location={this.props.location} title={title}>
@@ -37,7 +37,7 @@ class BlogPostTemplate extends React.Component {
             >
               {post.frontmatter.title}
             </h1>
-            <ShortBio post={post} />
+            {/* <ShortBio post={post} /> */}
             <br />
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
             <hr
@@ -45,7 +45,7 @@ class BlogPostTemplate extends React.Component {
                 marginBottom: rhythm(1),
               }}
             />
-            <Bio />
+            {/* <Bio /> */}
           </div>
         </div>
         <br />
@@ -59,7 +59,7 @@ class BlogPostTemplate extends React.Component {
             padding: rhythm(1.5),
           }}
         >
-          <RecentPosts />
+          {/* <RecentPosts /> */}
           <br />
           <br />
           <div
@@ -69,34 +69,7 @@ class BlogPostTemplate extends React.Component {
               flexDirection: "column",
               maxWidth: maxWidth,
             }}
-          >
-            <p
-              style={{
-                ...scale(-1 / 5),
-                fontWeight: "bold",
-                color: "grey",
-              }}
-            >
-              Responses
-            </p>
-            <div
-              style={{
-                backgroundColor: "#ffffff",
-                padding: rhythm(1),
-                border: "1px solid #E3E3E3",
-                borderRadius: rhythm(1 / 5),
-              }}
-            >
-              <Disqus.DiscussionEmbed
-                shortname={disqusShortname}
-                config={{
-                  url: this.props.location.href,
-                  identifier: this.props.location.pathname,
-                  title: post.frontmatter.title,
-                }}
-              />
-            </div>
-          </div>
+          ></div>
         </div>
       </Layout>
     )
@@ -118,7 +91,6 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         author
-        disqusShortname
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {

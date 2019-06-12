@@ -1,71 +1,33 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-
+import Bio from "../components/Bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm, scale } from "../utils/typography"
-import ShortBio from "../components/ShortBio"
+import PostCard from "../components/PostCard"
 
+import { rhythm, scale } from "../utils/typography"
+import { Container } from "../styles/styles"
 class BlogIndex extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
     const posts = data.allMarkdownRemark.edges
-    const maxWidth = rhythm(27)
+    const maxWidth = rhythm(20)
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO
-          title="All posts"
-          keywords={[`blog`, `gatsby`, `javascript`, `react`]}
-        />
-        <div
-          style={{
-            width: "100%",
-            display: "flex",
-            justifyContent: "center",
-            paddingLeft: rhythm(1),
-            paddingRight: rhythm(1),
-          }}
-        >
-          <div style={{ maxWidth: maxWidth }}>
-            {posts.map(({ node }) => {
-              const title = node.frontmatter.title || node.fields.slug
-              return (
-                <div key={node.fields.slug}>
-                  <h3
-                    style={{
-                      ...scale(1 / 3),
-                      marginBottom: rhythm(1 / 4),
-                    }}
-                  >
-                    <Link
-                      style={{
-                        boxShadow: `none`,
-                        color: "#000000",
-                        fontWeight: "bold",
-                      }}
-                      to={node.fields.slug}
-                    >
-                      {title}
-                    </Link>
-                  </h3>
-                  <p
-                    style={{
-                      ...scale(-1.5 / 7),
-                      color: "grey",
-                    }}
-                    dangerouslySetInnerHTML={{
-                      __html: node.frontmatter.description || node.excerpt,
-                    }}
-                  />
-                  <br />
-                  <ShortBio post={node} hideAvatar hideAuthor />
-                </div>
-              )
-            })}
-          </div>
-        </div>
+        <Container>
+          <Bio />
+          <SEO
+            title="All posts"
+            keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+          />
+          {posts.map(p => (
+            <div key={p.node.fields.slug}>
+              <PostCard data={p.node} />
+            </div>
+          ))}
+        </Container>
       </Layout>
     )
   }
@@ -92,6 +54,14 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            category
+            featuredImage {
+              childImageSharp {
+                fluid(maxWidth: 300) {
+                  src
+                }
+              }
+            }
           }
         }
       }

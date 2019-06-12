@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Medium`,
-    author: `Sai Krishna`,
-    description: `A gatsby starter blog as close as possible to medium.`,
-    siteUrl: `https://dazzling-heyrovsky-62d4f9.netlify.com/`,
+    title: `Portfolio by Chelsea G`,
+    author: `Chelsea Galvez`,
+    description: `Works and thoughts by Chelsea`,
+    siteUrl: `https://eloquent-knuth-1af701.netlify.com`,
     social: {
-      twitter: `_skris`,
-      instagram: `saikrishna.me`,
+      twitter: `chelseatheuser`,
+      github: `galvc`,
+      linkedin: `galvc`,
     },
-    disqusShortname: "saikrishna-me",
   },
   plugins: [
     {
@@ -49,6 +49,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {

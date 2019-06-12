@@ -18,18 +18,9 @@ function RecentPosts() {
         const posts = data.allMarkdownRemark.edges
 
         return (
-          <div
-            style={{
-              width: "100%",
-              display: "flex",
-              justifyContent: "space-around",
-              flexWrap: "wrap",
-            }}
-          >
+          <div>
             {posts.map(p => (
-              <div key={p.node.fields.slug}>
-                <PostCard data={p.node} />
-              </div>
+              <PostCard data={p.node} />
             ))}
           </div>
         )
@@ -61,6 +52,13 @@ const recentPostsQuery = graphql`
             title
             description
             author
+            featuredImage {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
           }
         }
       }
