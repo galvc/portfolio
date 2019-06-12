@@ -4,9 +4,10 @@ import Bio from "../components/Bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PostCard from "../components/PostCard"
-
+import Extra from "../components/Extra"
 import { rhythm, scale } from "../utils/typography"
 import { Container } from "../styles/styles"
+import "../styles/index.css"
 class BlogIndex extends React.Component {
   render() {
     const { data } = this.props
@@ -27,6 +28,8 @@ class BlogIndex extends React.Component {
               <PostCard data={p.node} />
             </div>
           ))}
+
+          <Extra />
         </Container>
       </Layout>
     )

@@ -12,7 +12,7 @@ export const Container = styled.div`
 `
 export const BioWrap = styled.div`
   font-family: "Helvetica Neue";
-  font-size: 2.5em;
+  font-size: 2em;
   font-weight: 900;
   strong {
     color: #ed2b49;
@@ -41,7 +41,11 @@ export const PostContainer = styled.div`
   span.tags {
     display: flex;
     justify-content: flex-end;
-    font-size: 0.5em;
+    font-size: 0.75em;
     color: #011936;
   }
+`
+
+export const ExtraLayout = styled.div`
+  width: 100%;
 `
