@@ -1,13 +1,9 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Disqus from "disqus-react"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
-import RecentPosts from "../components/RecentPosts"
-import ShortBio from "../components/ShortBio"
 
 class BlogPostTemplate extends React.Component {
   render() {

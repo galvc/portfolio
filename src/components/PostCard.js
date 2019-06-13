@@ -1,7 +1,6 @@
 import React from "react"
 import { scale, rhythm } from "../utils/typography"
 import { Link } from "gatsby"
-import ShortBio from "./ShortBio"
 import { PostContainer } from "../styles/styles"
 
 function PostCard({ data }) {

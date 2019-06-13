@@ -1,13 +1,15 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import Bio from "../components/Bio"
+import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PostCard from "../components/PostCard"
 import Extra from "../components/Extra"
+
 import { rhythm, scale } from "../utils/typography"
 import { Container } from "../styles/styles"
 import "../styles/index.css"
+
 class BlogIndex extends React.Component {
   render() {
     const { data } = this.props
