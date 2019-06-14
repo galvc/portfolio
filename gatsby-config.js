@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Portfolio by Chelsea G`,
+    title: `Chelsea G`,
     author: `Chelsea Galvez`,
     description: `Works and thoughts by Chelsea`,
     siteUrl: `https://eloquent-knuth-1af701.netlify.com`,

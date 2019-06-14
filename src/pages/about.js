@@ -26,7 +26,12 @@ class BlogIndex extends React.Component {
             paddingRight: rhythm(1),
           }}
         >
-          <div style={{ maxWidth: maxWidth }}>Edit ./src/pages/about.js</div>
+          I'm Chelsea, a recent grad from the University of Washington - Tacoma,
+          with a major in BS Information Technology. I work and thrive best at
+          the intersection of design and technology. I am interested in
+          Human-Centered Design principles because it focuses on usability -
+          creating emotionally and functionally better solutions for people.
+          ​​​​​​​
         </div>
       </Layout>
     )

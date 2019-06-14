@@ -10,14 +10,19 @@ function Bio() {
       <h2>Events</h2>
       <span>
         <ul>
-          <li>ChickTech Seattle</li>
-          <li>UX Convey - Volunteer, Attendee</li>
-          <li>Hopper x 1 Seattle - Scholar Attendee</li>
+          <li>ChickTech Seattle - Attendee</li>
+          <li>Convey UX (Feb 27 - Mar 1) - Volunteer, Attendee</li>
+          <li>Hopper x 1 Seattle (Mar 22-23) - Scholar Attendee</li>
         </ul>
       </span>
 
       <h2>Organizations</h2>
-      <span>Orange Paper - Web Design & Illustrator Volunteer</span>
+      <ul>
+        <li>
+          <a href="http://paperoranges.com">Paper Oranges</a>- Web Design &
+          Illustrator Volunteer
+        </li>
+      </ul>
     </ExtraLayout>
   )
 }

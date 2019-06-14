@@ -1,16 +1,11 @@
-/**
- * Bio component that queries for data
- * with Gatsby's StaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/static-query/
- */
-
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
-import { BioLayout, BioWrap } from "../styles/styles"
 
+import Image from "gatsby-image"
+import { BioLayout, BioWrap, Cross, Donut, Triangle } from "../styles/styles"
+import "../styles/index.css"
 import { rhythm, scale } from "../utils/typography"
+import { FaLinkedin, FaGithub, FaTwitterSquare } from "react-icons/fa"
 
 function Bio() {
   return (
@@ -21,7 +16,7 @@ function Bio() {
         const { twitter, github, linkedin } = data.site.siteMetadata.social
         return (
           <BioLayout>
-            <Image
+            {/* <Image
               fixed={data.avatar.childImageSharp.fixed}
               alt={author}
               style={{
@@ -33,17 +28,27 @@ function Bio() {
               imgStyle={{
                 borderRadius: `50%`,
               }}
-            />
+            /> */}
+            {/* <span className="cross" />
+             */}
+            <Cross />
+            <Donut />
             <BioWrap>
+              <Triangle />
               Hi! My name is <strong>{author}</strong>.
               <br />
               I'm a Designer and Front End Developer.
               <br />
               <section>
-                You can connect with me via{" "}
-                <a href={`https://twitter.com/${twitter}`}>Twitter</a>,{" "}
-                <a href={`https://github.com/${github}`}>Github</a>,{" "}
-                <a href={`https://linkedin.com/in/${linkedin}`}>Linkedin</a>{" "}
+                <a href={`https://twitter.com/${twitter}`}>
+                  <FaTwitterSquare />
+                </a>{" "}
+                <a href={`https://github.com/${github}`}>
+                  <FaGithub />
+                </a>{" "}
+                <a href={`https://linkedin.com/in/${linkedin}`}>
+                  <FaLinkedin />
+                </a>{" "}
               </section>
             </BioWrap>
           </BioLayout>

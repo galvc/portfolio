@@ -1,8 +1,7 @@
 import Typography from "typography"
-import Github from "typography-theme-github"
 
 const typography = new Typography({
-  baseFontSize: "19px",
+  baseFontSize: "16px",
   baseLineHeight: 1.6,
   headerFontFamily: [
     "Droid Sans",

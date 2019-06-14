@@ -2,9 +2,10 @@
 title: "Paymate"
 author: Chelsea Galvez
 featuredImage: "./paymate-cover.png"
-date: "2019-06-12"
+date: "2018-05-12"
 description: "A prototype concept for a mobile application that manages bill payments between family members. The target users are seniors and their family member."
-category: "UX Design, UI Design, Individual Project, Concept"
+category: "project"
+tag: "UX Design, UI Design, Individual Project, Concept"
 ---
 
 ##Case

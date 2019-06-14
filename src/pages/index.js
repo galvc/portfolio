@@ -5,8 +5,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PostCard from "../components/PostCard"
 import Extra from "../components/Extra"
-
-import { rhythm, scale } from "../utils/typography"
+import Research from "../components/Research"
+import { rhythm } from "../utils/typography"
 import { Container } from "../styles/styles"
 import "../styles/index.css"
 
@@ -15,7 +15,6 @@ class BlogIndex extends React.Component {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
     const posts = data.allMarkdownRemark.edges
-    const maxWidth = rhythm(20)
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -25,12 +24,16 @@ class BlogIndex extends React.Component {
             title="All posts"
             keywords={[`blog`, `gatsby`, `javascript`, `react`]}
           />
+          <span className="index-title">
+            <h1>Projects</h1>
+          </span>
+          <p />
           {posts.map(p => (
             <div key={p.node.fields.slug}>
               <PostCard data={p.node} />
             </div>
           ))}
-
+          <Research />
           <Extra />
         </Container>
       </Layout>
@@ -47,7 +50,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      filter: { frontmatter: { category: { eq: "project" } } }
+      sort: { order: DESC, fields: frontmatter___date }
+    ) {
       edges {
         node {
           excerpt
@@ -59,10 +65,11 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            tag
             category
             featuredImage {
               childImageSharp {
-                fluid(maxWidth: 300) {
+                sizes(quality: 90) {
                   src
                 }
               }

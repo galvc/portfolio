@@ -5,7 +5,7 @@ import { PostContainer } from "../styles/styles"
 
 function PostCard({ data }) {
   const { excerpt, fields, frontmatter } = data
-  const { title, featuredImage, category } = frontmatter
+  const { title, featuredImage, category, tag } = frontmatter
   const { slug } = fields
   return (
     <PostContainer>
@@ -13,40 +13,23 @@ function PostCard({ data }) {
         {/* <img
         src={featuredImage.childImageSharp.fluid.src}
       /> */}
-
         <div
           style={{
-            backgroundImage: `url(${featuredImage.childImageSharp.fluid.src})`,
+            backgroundImage: `url(${featuredImage.childImageSharp.sizes.src})`,
             height: "200px",
             width: "100%",
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
           }}
         />
-        <section>
-          <span
-            style={{
-              fontWeight: "bold",
-              ...scale(2 / 5),
-              color: "#000000",
-            }}
-          >
-            {title}
-          </span>
 
-          <br />
+        <div className="pad">
+          <h3>{title}</h3>
+          <span className="tags">{tag}</span>
 
-          <br />
-
-          <p
-            style={{
-              ...scale(-1.5 / 5),
-              color: "grey",
-            }}
-          >
-            {excerpt.substring(0, 100) + "..."}
-          </p>
-          <br />
-          <span className="tags">{category}</span>
-        </section>
+          {/* {excerpt.substring(0, 100) + "..."} */}
+        </div>
       </Link>
     </PostContainer>
   )
