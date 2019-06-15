@@ -26,7 +26,7 @@ class BlogIndex extends React.Component {
             paddingRight: rhythm(1),
           }}
         >
-          <div style={{ maxWidth: maxWidth }}>Edit ./src/pages/contact.js</div>
+          <div style={{ maxWidth: maxWidth }}>Be back with more info!</div>
         </div>
       </Layout>
     )

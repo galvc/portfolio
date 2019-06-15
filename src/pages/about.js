@@ -26,12 +26,7 @@ class BlogIndex extends React.Component {
             paddingRight: rhythm(1),
           }}
         >
-          I'm Chelsea, a recent grad from the University of Washington - Tacoma,
-          with a major in BS Information Technology. I work and thrive best at
-          the intersection of design and technology. I am interested in
-          Human-Centered Design principles because it focuses on usability -
-          creating emotionally and functionally better solutions for people.
-          ​​​​​​​
+          Be back with more info! ​​​​​​​
         </div>
       </Layout>
     )
