@@ -24,9 +24,9 @@ function PostCard({ data }) {
           }}
         />
 
-        <div className="pad">
+        <div className="card__wrap">
           <h3>{title}</h3>
-          <span className="tags">{tag}</span>
+          <span className="card__tags">{tag}</span>
 
           {/* {excerpt.substring(0, 100) + "..."} */}
         </div>

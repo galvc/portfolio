@@ -4,14 +4,14 @@ const typography = new Typography({
   baseFontSize: "16px",
   baseLineHeight: 1.6,
   headerFontFamily: [
-    "Droid Sans",
+    "Poppins",
     "Helvetica Neue",
     "Segoe UI",
     "Helvetica",
     "Arial",
     "sans-serif",
   ],
-  bodyFontFamily: ["Montserrat", "serif"],
+  bodyFontFamily: ["Poppins", "Montserrat", "serif"],
 })
 
 // Github.overrideThemeStyles = () => {

@@ -29,8 +29,6 @@ function Bio() {
                 borderRadius: `50%`,
               }}
             /> */}
-            {/* <span className="cross" />
-             */}
             <Cross />
             <Donut />
             <BioWrap>
@@ -39,7 +37,7 @@ function Bio() {
               <br />
               I'm a Designer and Front End Developer.
               <br />
-              <section>
+              <section className="bio__social">
                 <a href={`https://twitter.com/${twitter}`}>
                   <FaTwitterSquare />
                 </a>{" "}

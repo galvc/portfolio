@@ -23,7 +23,7 @@ export const BioWrap = styled.div`
   strong {
     color: #ed2b49;
   }
-  section {
+  section.bio__social {
     display: flex;
     margin: 1em 0;
     justify-content: center;
@@ -168,12 +168,12 @@ export const PostContainer = styled.div`
   transition: 0.5s ease;
   color: #17003a;
 
-  div.pad {
+  div.card__wrap {
     padding: 1em;
     box-sizing: border-box;
   }
 
-  .tags {
+  .card__tags {
     font-size: 0.75em;
     margin: none;
     color: #848189;
@@ -186,7 +186,6 @@ export const PostContainer = styled.div`
   h3 {
     border-left: 6px solid #17003a;
     padding-left: 0.5em;
-    font-weight: 900;
     color: #17003a;
   }
 `
@@ -198,24 +197,34 @@ export const ResearchLayout = styled.div`
   display: block;
   margin: 1em 0;
 
-  section {
+  ${"" /* section {
     margin: 1em 0;
     padding-left: 1em;
+  } */}
+
+  .post__grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    grid-template-areas: "title excerpt";
+    margin: 1.5em 1em;
   }
-  span.date {
-    font-size: 0.75em;
-    font-weight: 400;
+
+  .post__title {
+    grid-area: title;
   }
-  span {
-    display: block;
-    margin: 0;
+
+  .post__excerpt {
+    grid-area: excerpt;
   }
-  a {
-    display: block;
-    color: blue;
-  }
-  h2 {
-    border-left: 6px solid #17003a;
-    padding-left: 0.5em;
+
+  @media (max-width: 640px) {
+    .post__grid {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(1, 2fr);
+      grid-template-areas:
+        "title"
+        "excerpt";
+    }
   }
 `

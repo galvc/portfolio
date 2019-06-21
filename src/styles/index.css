@@ -6,6 +6,11 @@ a,
 a:visited,
 a:active {
   text-decoration: none;
+  color: #3184ea;
+}
+
+a:hover {
+  color: #0072ff;
 }
 
 h1,

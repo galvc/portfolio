@@ -13,12 +13,17 @@ function Research() {
           <ResearchLayout>
             <h1>Research</h1>
             {posts.map(p => (
-              <section>
-                <h2>{p.node.frontmatter.title}</h2>
-                <span className="date">{p.node.frontmatter.date}</span>
-                <span>{p.node.frontmatter.description}</span>
-                <Link to={p.node.fields.slug}>Read more</Link>
-              </section>
+              <div className="post__grid">
+                <section className="post__title">
+                  <h2>{p.node.frontmatter.title}</h2>
+                </section>
+                <section className="post__excerpt">
+                  {p.node.frontmatter.description}
+                  <br />
+                  {/* <span className="post__date">{p.node.frontmatter.date}</span> */}
+                  <Link to={p.node.fields.slug}>Read more >></Link>
+                </section>
+              </div>
             ))}
           </ResearchLayout>
         )
