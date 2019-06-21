@@ -33,14 +33,30 @@ export const BioWrap = styled.div`
   }
 `
 
-export const BioLayout = styled.div`
-  display: flex;
-  justify-content: space-between;
+export const BioLayout = styled.div``
+
+export const BioSkills = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "design develop goals";
+
+  span.bio__design {
+    grid-area: design;
+  }
+
+  span.bio__develop {
+    grid-area: develop;
+  }
+
+  span.bio__goals {
+    grid-area: goals;
+  }
 `
+
 export const Cross = styled.span`
   background: red;
   height: 25px;
-  position: relative;
+  position: absolute;
   width: 5px;
   animation: cross-spin 15s infinite 0s linear;
   z-index: -10;
@@ -89,9 +105,9 @@ export const Donut = styled.span`
   border-radius: 20px;
   height: 40px;
   width: 40px;
-  position: relative;
+  position: absolute;
   top: 30%;
-  left: 80%;
+  left: 70%;
   animation: hover-animate 10s infinite 0s linear;
   z-index: -20;
 
@@ -121,7 +137,7 @@ export const Triangle = styled.span`
   width: 0;
   height: 0;
   position: absolute;
-  top: 40%;
+  top: 35%;
   left: 35%;
   z-index: -10;
   border-left: 15px solid transparent;

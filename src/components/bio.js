@@ -2,10 +2,18 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 
 import Image from "gatsby-image"
-import { BioLayout, BioWrap, Cross, Donut, Triangle } from "../styles/styles"
+import {
+  BioLayout,
+  BioWrap,
+  BioSkills,
+  Cross,
+  Donut,
+  Triangle,
+} from "../styles/styles"
 import "../styles/index.css"
 import { rhythm, scale } from "../utils/typography"
 import { FaLinkedin, FaGithub, FaTwitterSquare } from "react-icons/fa"
+import { IoIosBrush, IoIosCode, IoIosTrendingUp } from "react-icons/io"
 
 function Bio() {
   return (
@@ -48,7 +56,23 @@ function Bio() {
                   <FaLinkedin />
                 </a>{" "}
               </section>
+              <br />
             </BioWrap>
+            {/* <BioSkills>
+              <span className="bio__design">
+                <IoIosBrush size={40} style={{ color: "blue" }} />
+                <br />I love to design
+              </span>
+              <span className="bio__develop">
+                <IoIosCode size={40} />
+                <br />I love to develop
+              </span>
+              <span className="bio__goals">
+                <IoIosTrendingUp size={40} />
+                <br />
+                these are my goals
+              </span>
+            </BioSkills> */}
           </BioLayout>
         )
       }}
