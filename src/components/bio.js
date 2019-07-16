@@ -2,14 +2,7 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 
 import Image from "gatsby-image"
-import {
-  BioLayout,
-  BioWrap,
-  BioSkills,
-  Cross,
-  Donut,
-  Triangle,
-} from "../styles/styles"
+import { BioLayout, BioWrap, BioSkills } from "../styles/styles"
 import "../styles/index.css"
 import { rhythm, scale } from "../utils/typography"
 import { FaLinkedin, FaGithub, FaTwitterSquare } from "react-icons/fa"
@@ -37,10 +30,7 @@ function Bio() {
                 borderRadius: `50%`,
               }}
             /> */}
-            <Cross />
-            <Donut />
             <BioWrap>
-              <Triangle />
               Hi! My name is <strong>{author}</strong>.
               <br />
               I'm a Designer and Front End Developer.

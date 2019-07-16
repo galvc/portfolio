@@ -20,7 +20,8 @@ class Layout extends React.Component {
           style={{
             ...scale(2 / 2.25),
             fontWeight: "bold",
-            margin: rhythm(1 / 2),
+            margin: rhythm(1),
+            color: "#1233ED",
           }}
         >
           <Link

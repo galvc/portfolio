@@ -8,7 +8,7 @@ category: "project"
 tag: "UX Design, UI Design, Individual Project, Concept"
 ---
 
-##Case
+#Case
 Tracking finances is no easy task. And it’s no easier managing someone else’s.
 This project is inspired by my own personal struggles with organizing my Grandmother’s expenses and bills.
 This is an exploration into a mobile application that: allows sharing, collaboration, and management of data between two people and examines how user interfaces can be more accessible towards those who are not technologically-inclined.
@@ -16,13 +16,13 @@ Statement of accounts, scrawled notes, and checks scattered around the couch and
 
 Now I’m thinking, is there a way for us both to be on top of things?
 
-##Situation
+#Situation
 
 1. Bills have various due dates in a course of a month. It can be very difficult to remember the dates, amount, and ways to pay them.
 2. I, as a helper, am not physically able to be with her often.
 3. As an elder, she needs constant reminders and motivation.
 
-##Ideation
+#Ideation
 A good deal of financial application that track, monitor, and let you authorize payments online already exist. This application does not aim to fit into those niche. I decided that the main goal of this application is:
 be a medium to provide help and guidance.
 This application aims to be an aid for seniors like my grandmother. My observations show that they are reluctant and afraid to learn or change despite being fascinated and eager to make sense of technology. I wanted to create an accessible application that will help at least two people in cooperation to manage finances regardless of distance.
@@ -39,7 +39,7 @@ Beyond the games and basic functions of her phone, she is not familiar with the 
 
 My grandmother was able to learn to make FaceTime and Facebook calls because of repetition and its easy navigation. I find that if anything derails that routine (like alerts, errors, or popups) she becomes confused and is unable to move forward. She frequently fears that pressing a wrong button might lead to her getting charged without her knowing. She has approached me several times with questions about a certain popup, not knowing there is always an option to go back to the previous page, or close the popup window.
 
-##Insights
+#Insights
 Because she did not grow up using smartphones heavily in her daily life, she is unable to understand and apply concepts, schemes, and terminologies of any kind. She is able to pick up on concepts that she is already familiar with in real life (email, caps lock) but concepts (menu, navigation, username) are still a hard reach. Combined with her issues as a person whose second language is English, it is quite hard sometimes to explain certain processes to her even though she desires to master them.
 
 Here are the important insights I gathered:
@@ -48,7 +48,7 @@ Here are the important insights I gathered:
 2. Unfamiliar icons and symbols should be avoided.
 3. Navigation should be kept to a minimum. If it is not possible, the path must be straight and direct. Always create an option to return to the home screen.
 
-##Approach
+#Approach
 I decided that the ecosystem of the application needs to be as simple as possible. Each button on the main screen leads to as few pages as possible. This fulfills the application's goal to be direct and straight to the point.
 
 Three of the selections from the main menu eventually lead to the BILL PAGE. This is because all repetitive information is merged into one screen. Pay, View All Bills, and Calendar are all different selections because they present data for different purposes.
@@ -72,14 +72,14 @@ Notify the Mate for help and reminders
 Message, email, call, send a notification to the Mate
 Track all activities for all actions done inside the application
 
-##Mockups
+#Mockups
 ![paymate image](./p-3.png)
 ![paymate image](./p-4.png)
 ![paymate image](./p-5.png)
 ![paymate image](./p-6.png)
 ![paymate image](./p-7.png)
 
-##Insights
+#Insights
 I believe a well-designed user interface is functional first and pretty second. I value beautiful aesthetics but as I delve further into exploring accessibility, I have to keep in mind how to merge them together.
 
 This is an ongoing project in understanding accessibility for seniors though my main target is my grandmother. Through feedback and iteration, I learned to: keep my pages at a minimum, choose appropriate visual aids, label symbols, check myself when I am making assumptions, request feedback regularly, and create multiple paths to a goal.

@@ -1,15 +1,14 @@
 import React from "react"
 import { graphql } from "gatsby"
 
+import { BioContainer } from "../styles/styles"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
 
 class BlogIndex extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
-    const maxWidth = rhythm(27)
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -17,17 +16,36 @@ class BlogIndex extends React.Component {
           title="About"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
-        <div
-          style={{
-            width: "100%",
-            display: "flex",
-            justifyContent: "center",
-            paddingLeft: rhythm(1),
-            paddingRight: rhythm(1),
-          }}
-        >
-          Be back with more info! ​​​​​​​
-        </div>
+        <BioContainer>
+          <h1>Hi, I'm Chelsea</h1>
+          I'm a designer and developer with a passion for front-end development
+          and human-centered design. I work and thrive best at the intersection
+          of design and technology. I seek to continuously improve myself and
+          help lift others up. I love bringing ideas to life and collaborating
+          with people.
+          <p />
+          I graduated at the University of Washington with a BS in Information
+          Technology. Drawing, art, and video games are some of my hobbies.
+          <p />
+          <a
+            class="btn"
+            href="https://drive.google.com/file/d/1WP1SeaUJU2iZEi-bf8cr0Xx0Ns1Fm6Vw/view"
+          >
+            Download my resume
+          </a>
+          <section style={{ display: `block` }}>
+            <small>
+              Follow me on{" "}
+              <a href={`https://twitter.com/chelseatheuser`}>Twitter</a>
+              <br />
+              View my <a href={`https://github.com/galvc`}>Github</a>
+              <br />
+              Follow me on{" "}
+              <a href={`https://linkedin.com/in/galvc`}>LinkedIn</a>
+              <br />
+            </small>
+          </section>
+        </BioContainer>
       </Layout>
     )
   }

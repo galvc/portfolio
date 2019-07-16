@@ -13,8 +13,8 @@ const menuItems = [
     path: "/about",
   },
   {
-    name: "Contact",
-    path: "/contact",
+    name: "Works",
+    path: "/works",
   },
 ]
 

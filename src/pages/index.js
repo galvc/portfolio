@@ -7,7 +7,7 @@ import PostCard from "../components/PostCard"
 import Extra from "../components/Extra"
 import Research from "../components/Research"
 import { rhythm } from "../utils/typography"
-import { Container } from "../styles/styles"
+import { Container, ProjectContainer } from "../styles/styles"
 import "../styles/index.css"
 
 class BlogIndex extends React.Component {
@@ -24,15 +24,17 @@ class BlogIndex extends React.Component {
             title="All posts"
             keywords={[`blog`, `gatsby`, `javascript`, `react`]}
           />
-          <span className="index-title">
-            <h1>Projects</h1>
-          </span>
-          <p />
-          {posts.map(p => (
-            <div key={p.node.fields.slug}>
-              <PostCard data={p.node} />
-            </div>
-          ))}
+          <ProjectContainer>
+            <span className="index-title">
+              <h1>Projects</h1>
+            </span>
+            <p />
+            {posts.map(p => (
+              <div key={p.node.fields.slug}>
+                <PostCard data={p.node} />
+              </div>
+            ))}
+          </ProjectContainer>
           <Research />
           <Extra />
         </Container>

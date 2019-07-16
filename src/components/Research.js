@@ -21,7 +21,9 @@ function Research() {
                   {p.node.frontmatter.description}
                   <br />
                   {/* <span className="post__date">{p.node.frontmatter.date}</span> */}
-                  <Link to={p.node.fields.slug}>Read more >></Link>
+                  <span className="post__read-more">
+                    <Link to={p.node.fields.slug}>Read more </Link>
+                  </span>
                 </section>
               </div>
             ))}

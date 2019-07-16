@@ -29,6 +29,7 @@ class BlogPostTemplate extends React.Component {
             <h1
               style={{
                 ...scale(6 / 5),
+                color: `black`,
               }}
             >
               {post.frontmatter.title}
