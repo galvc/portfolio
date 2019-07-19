@@ -33,7 +33,7 @@ function Bio() {
             <BioWrap>
               Hi! My name is <strong>{author}</strong>.
               <br />
-              I'm a Designer and Front End Developer.
+              I'm a Web Designer and Developer.
               <br />
               <section className="bio__social">
                 <a href={`https://twitter.com/${twitter}`}>
