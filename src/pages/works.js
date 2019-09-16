@@ -4,30 +4,30 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
+import { ProjectContainer, Container } from "../styles/styles"
+import PostCard from "../components/PostCard"
 
 class Works extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
-    const maxWidth = rhythm(27)
+    const posts = data.allMarkdownRemark.edges
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO
-          title="About"
-          keywords={[`blog`, `gatsby`, `javascript`, `react`]}
-        />
-        <div
-          style={{
-            width: "100%",
-            display: "flex",
-            justifyContent: "center",
-            paddingLeft: rhythm(1),
-            paddingRight: rhythm(1),
-          }}
-        >
-          <div style={{ maxWidth: maxWidth }}>Be back with more info!</div>
-        </div>
+        <Container>
+          <SEO
+            title="Chelsea Galvez's Works"
+            keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+          />
+          <ProjectContainer>
+            {posts.map(p => (
+              <div key={p.node.fields.slug}>
+                <PostCard data={p.node} />
+              </div>
+            ))}
+          </ProjectContainer>
+        </Container>
       </Layout>
     )
   }
@@ -42,7 +42,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      filter: { frontmatter: { category: { eq: "project" } } }
+      sort: { order: DESC, fields: frontmatter___date }
+    ) {
       edges {
         node {
           excerpt
@@ -54,6 +57,15 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            tag
+            category
+            featuredImage {
+              childImageSharp {
+                sizes(quality: 90) {
+                  src
+                }
+              }
+            }
           }
         }
       }

@@ -31,9 +31,12 @@ function Bio() {
               }}
             /> */}
             <BioWrap>
-              Hi! My name is <strong>{author}</strong>.
+              <strong>
+                Hi! My name is <span class="highlight">{author}</span>.
+              </strong>
               <br />
-              I'm a Web Designer and Developer.
+              I work as Web Designer and Developer. I aim to create meaningful
+              projects and user experiences.
               <br />
               <section className="bio__social">
                 <a href={`https://twitter.com/${twitter}`}>
@@ -44,25 +47,11 @@ function Bio() {
                 </a>{" "}
                 <a href={`https://linkedin.com/in/${linkedin}`}>
                   <FaLinkedin />
+                  <i class="fab fa-linkedin"></i>
                 </a>{" "}
               </section>
               <br />
             </BioWrap>
-            {/* <BioSkills>
-              <span className="bio__design">
-                <IoIosBrush size={40} style={{ color: "blue" }} />
-                <br />I love to design
-              </span>
-              <span className="bio__develop">
-                <IoIosCode size={40} />
-                <br />I love to develop
-              </span>
-              <span className="bio__goals">
-                <IoIosTrendingUp size={40} />
-                <br />
-                these are my goals
-              </span>
-            </BioSkills> */}
           </BioLayout>
         )
       }}

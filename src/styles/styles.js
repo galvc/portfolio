@@ -1,12 +1,15 @@
 import styled from "styled-components"
 
+//color variables
+export const red = "#ed2b49"
+export const darkblue = "#17003a"
+export const gray = "#848189"
+export const blue = "#364cc7"
+export const brightblue = "#0072ff"
+
 export const Container = styled.div`
   box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  max-width: 70%;
+  max-width: 90%;
   margin: 0 auto;
   padding: 1em;
 `
@@ -18,26 +21,34 @@ export const BioContainer = styled(Container)`
 
 export const ProjectContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: repeat(2, 1fr);
   grid-auto-flow: row;
+  width: 100%;
 
-  .index-title {
-    display: block;
+  @media (max-width: 768px) {
     width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 1em;
   }
 `
 export const BioWrap = styled.div`
   font-family: "Helvetica Neue";
   font-size: 2em;
-  font-weight: 900;
 
   strong {
-    color: #ed2b49;
+    font-weight: 900;
   }
+  .highlight {
+    color: ${red};
+  }
+
   section.bio__social {
     display: flex;
     margin: 1em 0;
     justify-content: center;
+    color: ${brightblue};
+
     a {
       padding: 0 0.5em;
     }
@@ -64,154 +75,55 @@ export const BioSkills = styled.div`
   }
 `
 
-export const Cross = styled.span`
-  background: red;
-  height: 25px;
-  position: absolute;
-  width: 5px;
-  animation: cross-spin 15s infinite 0s linear;
-  z-index: -10;
-
-  :after {
-    background: red;
-    content: "";
-    height: 5px;
-    left: -10px;
-    position: absolute;
-    top: 10px;
-    width: 25px;
-  }
-
-  @keyframes cross-spin {
-    0% {
-      transform: rotate(0deg);
-      transform-origin: 50% 50%;
-      opacity: 0.8;
-    }
-    25% {
-      transform: rotate(90deg);
-      transform-origin: 50% 50%;
-    }
-    50% {
-      transform: rotate(180deg);
-      transform-origin: 50% 50%;
-    }
-    75% {
-      transform: rotate(270deg);
-      transform-origin: 50% 50%;
-      opacity: 0.8;
-    }
-    100% {
-      transform: rotate(360deg);
-      transform-origin: 50% 50%;
-      opacity: 0.6;
-    }
-  }
-  @media (max-width: 680px) {
-    display: none;
-  }
-`
-export const Donut = styled.span`
-  border: 10px solid #ffde23;
-  border-radius: 20px;
-  height: 40px;
-  width: 40px;
-  position: absolute;
-  top: 30%;
-  left: 70%;
-  animation: hover-animate 10s infinite 0s linear;
-  z-index: -20;
-
-  @keyframes hover-animate {
-    0% {
-      transform: translateY(5%);
-    }
-    20% {
-      transform: translateY(40%);
-    }
-    49% {
-      transform: translateY(-20%);
-    }
-    69% {
-      transform: translateY(60%);
-    }
-    90% {
-      transform: translateY(10%);
-    }
-  }
-
-  @media (max-width: 680px) {
-    display: none;
-  }
-`
-export const Triangle = styled.span`
-  width: 0;
-  height: 0;
-  position: absolute;
-  top: 35%;
-  left: 35%;
-  z-index: -10;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-bottom: 15px solid #6c5491;
-  animation: triangle-spin 15s infinite 0s linear;
-
-  @keyframes triangle-spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    11% {
-      transform: rotate(90deg) translateY(20%);
-      transform-origin: 50% 50%;
-    }
-    26% {
-      transform: rotate(100deg) translateX(-30%) translateY(10%);
-    }
-    39% {
-      transform: rotate(160deg) translateX(10%) translateY(-35%);
-      transform-origin: 50% 50%;
-      opacity: 50%;
-    }
-    51% {
-      transform: rotate(270deg) translateY(-15%);
-      opacity: 30%;
-    }
-    66% {
-      transform: rotate(300deg) translateX(-80%) translateY(-40%);
-      transform-origin: 50% 50%;
-    }
-  }
-
-  @media (max-width: 680px) {
-    display: none;
-  }
-`
 export const PostContainer = styled.div`
   background: "#fff";
-  min-width: 300px;
-  margin: 1em;
   border-radius: 5px;
   transition: 0.5s ease;
-  color: #17003a;
+  color: ${darkblue};
+  height: 25em;
 
   div.card__wrap {
-    padding: 1em;
-    box-sizing: border-box;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
-  }
+    margin: 1em;
 
-  .card__tags {
-    font-size: 0.75em;
-    margin: none;
-    color: #848189;
-  }
+    .card__image {
+      height: 240px;
+      width: 100%;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin: 0 1em 0.5em 0;
+    }
+    .card__details {
+      color: ${gray};
 
-  h3 {
-    margin-bottom: 0;
-  }
+      h2 {
+        margin-bottom: 0;
+        color: ${brightblue};
 
-  :hover {
-    transform: translateY(-1.5rem);
+        :hover {
+          text-decoration: underline;
+        }
+      }
+
+      p {
+        margin: 0;
+        line-height: 1.5;
+      }
+
+      .text__tag {
+        font-size: 0.9em;
+        margin-bottom: 0.5em;
+      }
+
+      .text__desc {
+        font-weight: 300;
+      }
+      &:hover,
+      p:hover {
+        cursor: pointer;
+        color: ${brightblue};
+      }
+    }
   }
 `
 
@@ -239,7 +151,7 @@ export const ResearchLayout = styled.div`
   }
 
   .post__read-more {
-    border-left: 3px solid #364cc7;
+    border-left: 3px solid ${blue};
     font-size: 0.75em;
     font-weight: 600;
     text-transform: uppercase;
@@ -248,7 +160,7 @@ export const ResearchLayout = styled.div`
   }
 
   .post__read-more:hover {
-    border-color: #0072ff;
+    border-color: ${brightblue};
   }
 
   @media (max-width: 640px) {
