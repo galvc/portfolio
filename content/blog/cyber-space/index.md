@@ -1,11 +1,11 @@
 ---
 title: "Cyber Space"
 author: Chelsea Galvez
-featuredImage: "./cyber-cover.png"
+featuredImage: "./cybersecurity-cover.png"
 date: "2017-06-12"
-description: "Cyber Space was created for Infragard to teach cybersecurity concepts and etiquette to children in the 3rd-6th grade. This website showcases best cybersecurity practices and ethics through interaction and gamification of learning."
+description: "Teaching cybersecurity concepts and etiquette to children in the 3rd-6th grade through gamification"
 category: "project"
-tag: "Game, Web Design, Web Development, Graphics Design"
+tag: "Game, Web Development, Graphics Design"
 ---
 
 #Demo the Website

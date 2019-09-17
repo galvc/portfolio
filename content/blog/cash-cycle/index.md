@@ -3,7 +3,7 @@ title: "Cash Cycle"
 author: Chelsea Galvez
 featuredImage: "./cashcycle-team.jpg"
 date: "2018-07-22"
-description: "Cash Cycle is an entry to Angel Hack Seattle (July 21-22, 2018.) With my team, we entered the Code for A Cause challenge, winning overall runner-up in the event."
+description: "Runner-up for Angel Hack Seattle Code for A Cause challenge (2018). Prototype for a bike-sharing 'cleanup' solution."
 category: "project"
 tag: "Front end development"
 ---
@@ -35,6 +35,6 @@ Our working prototype involved using Google Maps API to create a list of routes 
 My role involved developing the front-end to show a working prototype during presentation. I used Material Design Lite as a framework to create a mock Android app using the web browser. Having that framework made the design process so much easier, especially during crunch time. Being able to use their components and styles for consistent design was something I took advantage of. The majority of my time was then spent using Javascript to tie in the back-end with the front end, to make it interactive in real-time.
 
 #Winning Runner-Up!
-Our project won us the Code for a Cause Impact Challenge. This award is considered the runner-up among the entire projects presented that day.
+Our project won us the Code for a Cause Impact Challenge. This award won runner-up among the line-up of projects presented that day.
 
 ![cash cycle team picture](./cashcycle-team.jpg)

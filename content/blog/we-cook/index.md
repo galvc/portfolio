@@ -3,9 +3,9 @@ title: "We Cook"
 author: Chelsea Galvez
 featuredImage: "./wecook-cover.png"
 date: "2018-01-01"
-description: "Human-Computer Interaction prototype for a recipe application that aggregates recipes based on ingredients filtered by the user."
+description: "Prototype that aggregates recipes based on filtered ingredients"
 category: "project"
-tag: "UX Design, UI Design, HCI Project"
+tag: "UX/UI Design"
 ---
 
 ##Demo the prototype

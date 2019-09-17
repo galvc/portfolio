@@ -3,7 +3,7 @@ title: "Green Studio"
 author: Chelsea Galvez
 featuredImage: "./gs-1.png"
 date: "2019-03-30"
-description: "."
+description: "Ecommerce website using React"
 category: "project"
 tag: "React"
 ---

@@ -15,19 +15,17 @@ class Works extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <Container>
-          <SEO
-            title="Chelsea Galvez's Works"
-            keywords={[`blog`, `gatsby`, `javascript`, `react`]}
-          />
-          <ProjectContainer>
-            {posts.map(p => (
-              <div key={p.node.fields.slug}>
-                <PostCard data={p.node} />
-              </div>
-            ))}
-          </ProjectContainer>
-        </Container>
+        <SEO
+          title="Chelsea Galvez's Works"
+          keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+        />
+        <ProjectContainer>
+          {posts.map(p => (
+            <div key={p.node.fields.slug}>
+              <PostCard data={p.node} />
+            </div>
+          ))}
+        </ProjectContainer>
       </Layout>
     )
   }

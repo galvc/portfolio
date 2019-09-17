@@ -1,11 +1,11 @@
 ---
 title: "Dawg Den"
 author: Chelsea Galvez
-featuredImage: "./dd-11.png"
+featuredImage: "./dawgden-cover.png"
 date: "2017-01-01"
 description: "UI redesign for UW Tacoma's Dawg Den, the central website for managing organizational activities."
 category: "project"
-tag: "UI Design, Concept"
+tag: "UI Design"
 ---
 
 ##Current Situation

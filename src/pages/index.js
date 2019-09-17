@@ -1,12 +1,13 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import Image from "gatsby-image"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PostCard from "../components/PostCard"
 import Extra from "../components/Extra"
-import Research from "../components/Research"
-import { Container, ProjectContainer } from "../styles/styles"
+import Blog from "../components/Blog"
+import { Container, ProjectContainer, Box } from "../styles/styles"
 import "../styles/index.css"
 
 class BlogIndex extends React.Component {
@@ -23,7 +24,6 @@ class BlogIndex extends React.Component {
             title="All posts"
             keywords={[`blog`, `gatsby`, `javascript`, `react`]}
           />
-          <br />
           {/* <h1>Projects</h1>
           <ProjectContainer>
             {posts.map(p => (
@@ -32,7 +32,33 @@ class BlogIndex extends React.Component {
               </div>
             ))}
           </ProjectContainer> */}
-          <Research />
+          <Box>
+            <img
+              src="/pictograms-small.png"
+              style={{
+                width: "175px",
+                height: "auto",
+                display: "inline-block",
+                float: "right",
+              }}
+            />
+            <h1>Currently Working On 🗒️</h1>
+            <p>
+              Pictograms are customizable illustrations for your marketing
+              emails and newsletters.
+              <br />
+              Check out the upcoming page at:{" "}
+              <strong>
+                <a
+                  href="https://www.producthunt.com/upcoming/pictograms"
+                  target="_blank"
+                >
+                  Product Hunt
+                </a>
+              </strong>
+            </p>
+          </Box>
+          <Blog />
           <Extra />
         </Container>
       </Layout>

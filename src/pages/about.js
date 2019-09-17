@@ -18,11 +18,9 @@ class BlogIndex extends React.Component {
         />
         <BioContainer>
           <h1>Hi, I'm Chelsea</h1>
-          I'm a designer and developer with a passion for front-end development
-          and human-centered design. I work and thrive best at the intersection
-          of design and technology. I seek to continuously improve myself and
-          help lift others up. I love bringing ideas to life and collaborating
-          with people.
+          I'm a web developer and designer. I work and thrive best at the
+          intersection of design and technology. I seek to continuously improve
+          myself and help lift others up.
           <p />
           I graduated at the University of Washington with a BS in Information
           Technology. Drawing, art, and video games are some of my hobbies.

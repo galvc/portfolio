@@ -1,9 +1,9 @@
 ---
 title: "Is it raining in Seattle?"
 author: Chelsea Galvez
-featuredImage: "./ii-1.png"
+featuredImage: "./raining-cover.png"
 date: "2019-03-01"
-description: "."
+description: "Website created with React, OpenWeatherMap and Unsplash API"
 category: "project"
 tag: "React"
 ---

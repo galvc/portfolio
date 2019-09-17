@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-
+import { MenuContainer } from "../styles/styles"
 import { scale, rhythm } from "../utils/typography"
 
 const menuItems = [
@@ -20,29 +20,13 @@ const menuItems = [
 
 function Menu() {
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-      }}
-    >
+    <MenuContainer>
       {menuItems.map(m => (
-        <Link
-          style={{
-            boxShadow: `none`,
-            textDecoration: `none`,
-            textTransform: "uppercase",
-            letterSpacing: 1,
-            color: "grey",
-            ...scale(-1 / 5),
-            marginRight: rhythm(1),
-          }}
-          to={m.path}
-        >
+        <Link to={m.path}>
           <p>{m.name}</p>
         </Link>
       ))}
-    </div>
+    </MenuContainer>
   )
 }
 

@@ -1,9 +1,9 @@
 ---
 title: "Esterline Korry IT Intern"
 author: Chelsea Galvez
-featuredImage: "./dnn.png"
+featuredImage: "./dnn-cover.png"
 date: "2018-06-01"
-description: "As an IT Intern at Esterline-Korry, I redesigned and developed their company intranet using DotNetNuke."
+description: "Developing Esterline-Korry's company intranet using DotNetNuke."
 category: "project"
 tag: "Web dev, Web design, CMS"
 ---

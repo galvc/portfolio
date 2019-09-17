@@ -2,11 +2,9 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 
 import Image from "gatsby-image"
-import { BioLayout, BioWrap, BioSkills } from "../styles/styles"
+import { BioLayout, BioWrap } from "../styles/styles"
 import "../styles/index.css"
-import { rhythm, scale } from "../utils/typography"
 import { FaLinkedin, FaGithub, FaTwitterSquare } from "react-icons/fa"
-import { IoIosBrush, IoIosCode, IoIosTrendingUp } from "react-icons/io"
 
 function Bio() {
   return (
@@ -35,8 +33,8 @@ function Bio() {
                 Hi! My name is <span class="highlight">{author}</span>.
               </strong>
               <br />
-              I work as Web Designer and Developer. I aim to create meaningful
-              projects and user experiences.
+              I work as a Web Designer and Developer, aiming to create
+              meaningful projects and user experiences.
               <br />
               <section className="bio__social">
                 <a href={`https://twitter.com/${twitter}`}>

@@ -1,9 +1,9 @@
 ---
 title: "Dash Point"
 author: Chelsea Galvez
-featuredImage: "./dp-1.png"
+featuredImage: "./dashpoint-cover.png"
 date: "2018-03-01"
-description: "Dash Point is a community in Pierce County, Washington. This is web redesign and development project using Wordpress as CMS."
+description: "Official website for Dash Point Improvement Club in Pierce County, Washington."
 category: "project"
 tag: "Web dev, Web design, Wordpress"
 ---
