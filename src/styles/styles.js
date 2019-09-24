@@ -13,6 +13,10 @@ export const Container = styled.div`
   max-width: 80%;
   margin: 0 auto;
   padding: 1em;
+
+  @media screen and (max-width: 768px) {
+    max-width: 95%;
+  }
 `
 
 export const BioContainer = styled(Container)`
@@ -54,6 +58,10 @@ export const BioWrap = styled.div`
     a {
       padding: 0 0.5em;
     }
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 1.5em;
   }
 `
 
@@ -103,6 +111,12 @@ export const BlogLayout = styled.div`
   float: left;
   width: 50%;
   margin: 0 1em;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+    width: 100%;
+    margin: 0;
+  }
 `
 
 export const ExtraLayout = styled.div`
@@ -110,14 +124,19 @@ export const ExtraLayout = styled.div`
   float: left;
   width: 40%;
   margin: 0 1em;
+  @media screen and (max-width: 768px) {
+    display: block;
+    width: 100%;
+    margin: 0;
+  }
 `
 
 export const MenuContainer = styled.div`
-  width: 20%;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   text-transform: uppercase;
 `
 export const Box = styled.div`

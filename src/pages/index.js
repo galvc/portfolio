@@ -15,7 +15,6 @@ class BlogIndex extends React.Component {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
     const posts = data.allMarkdownRemark.edges
-
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <Container>
@@ -33,15 +32,16 @@ class BlogIndex extends React.Component {
             ))}
           </ProjectContainer> */}
           <Box>
-            <img
-              src="/pictograms-small.png"
+            {/* <img
+              src={require("./assets/pictograms-small.png")}
               style={{
                 width: "175px",
                 height: "auto",
                 display: "inline-block",
                 float: "right",
               }}
-            />
+            /> */}
+
             <h1>Currently Working On 🗒️</h1>
             <p>
               Pictograms are customizable illustrations for your marketing
