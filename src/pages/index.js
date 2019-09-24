@@ -10,6 +10,8 @@ import Blog from "../components/Blog"
 import { Container, ProjectContainer, Box } from "../styles/styles"
 import "../styles/index.css"
 
+import pictograms from "./pictograms-small.png"
+
 class BlogIndex extends React.Component {
   render() {
     const { data } = this.props
@@ -32,15 +34,15 @@ class BlogIndex extends React.Component {
             ))}
           </ProjectContainer> */}
           <Box>
-            {/* <img
-              src={require("./assets/pictograms-small.png")}
+            <img
+              src={pictograms}
               style={{
                 width: "175px",
                 height: "auto",
                 display: "inline-block",
                 float: "right",
               }}
-            /> */}
+            />
 
             <h1>Currently Working On 🗒️</h1>
             <p>
