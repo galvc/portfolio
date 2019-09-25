@@ -4,7 +4,7 @@ author: Chelsea Galvez
 featuredImage: "./pe-4.jpg"
 date: "2018-03-01"
 description: "Project EMAR is an effort to manage, measure, and reduce stress levels among teens by deploying a social robot to living autonomously in a high school."
-category: "research"
+category: "blog"
 tag: "research"
 ---
 

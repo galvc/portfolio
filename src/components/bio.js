@@ -30,7 +30,7 @@ function Bio() {
             /> */}
             <BioWrap>
               <strong>
-                Hi! My name is <span class="highlight">{author}</span>.
+                <span class="highlight">{author}</span>
               </strong>
               <br />
               I work as a Web Designer and Developer, aiming to create

@@ -11,17 +11,14 @@ class Layout extends React.Component {
     let header
 
     header = (
-      <div
-        style={{
-          backgroundColor: "#F9FAFC",
-        }}
-      >
-        <h1
+      <div class="head">
+        <span
           style={{
             ...scale(2 / 2.25),
             fontWeight: "bold",
-            margin: rhythm(1),
+            display:"inline-block",
             color: "#1233ED",
+            width: "auto",
           }}
         >
           <Link
@@ -34,7 +31,7 @@ class Layout extends React.Component {
           >
             {title}
           </Link>
-        </h1>
+          </span>
         <Menu />
       </div>
     )

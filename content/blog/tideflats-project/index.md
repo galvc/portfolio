@@ -4,7 +4,7 @@ author: Chelsea Galvez
 featuredImage: "./tideflats-cover.png"
 date: "2018-07-22"
 description: "A research project conducted by a five-member team. My role as co-Project Manager is to assign tasks, interface with clients, develop requirements, and provide vision for our goals."
-category: "research"
+category: "blog"
 tag: "Research"
 ---
 

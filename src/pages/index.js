@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PostCard from "../components/PostCard"
 import Extra from "../components/Extra"
-import Blog from "../components/Blog"
+import BlogSection from "../components/BlogSection"
 import { Container, ProjectContainer, Box } from "../styles/styles"
 import "../styles/index.css"
 
@@ -41,10 +41,11 @@ class BlogIndex extends React.Component {
                 height: "auto",
                 display: "inline-block",
                 float: "right",
+                margin: ".75em"
               }}
             />
 
-            <h1>Currently Working On 🗒️</h1>
+            <h2>Currently Working On 🗒️</h2>
             <p>
               Pictograms are customizable illustrations for your marketing
               emails and newsletters.
@@ -60,7 +61,7 @@ class BlogIndex extends React.Component {
               </strong>
             </p>
           </Box>
-          <Blog />
+          <BlogSection />
           <Extra />
         </Container>
       </Layout>

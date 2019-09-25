@@ -46,6 +46,8 @@ export const BioWrap = styled.div`
     font-weight: 900;
   }
   .highlight {
+      display: block;
+      text-align: center;
     color: ${red};
   }
 
@@ -112,6 +114,7 @@ export const BlogLayout = styled.div`
   width: 50%;
   margin: 0 1em;
 
+
   @media screen and (max-width: 768px) {
     display: block;
     width: 100%;
@@ -132,23 +135,31 @@ export const ExtraLayout = styled.div`
 `
 
 export const MenuContainer = styled.div`
-  width: 100%;
-  margin: 0 auto;
+    width: 60%;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 0;
   text-transform: uppercase;
+
+  a {
+      color: initial;
+  }
+
 `
 export const Box = styled.div`
   background: ${slateblue};
-  margin-left: -12%;
-  margin-right: -12%;
-  margin-bottom: 2em;
-  padding: 2em 15%;
+  margin-bottom: 1em;
+  padding: 5%;
 
-  h1,
+  h2,
   p {
     color: white;
+  }
+
+  p {
+      margin: 0;
   }
 
   a,

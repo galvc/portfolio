@@ -4,10 +4,10 @@ import { MenuContainer } from "../styles/styles"
 import { scale, rhythm } from "../utils/typography"
 
 const menuItems = [
-  {
-    name: "Home",
-    path: "/",
-  },
+//   {
+//     name: "Home",
+//     path: "/",
+//   },
   {
     name: "About",
     path: "/about",
@@ -16,6 +16,10 @@ const menuItems = [
     name: "Works",
     path: "/works",
   },
+  {
+    name: "Blog",
+    path: "/blog",
+  },
 ]
 
 function Menu() {
@@ -23,7 +27,7 @@ function Menu() {
     <MenuContainer>
       {menuItems.map(m => (
         <Link to={m.path}>
-          <p>{m.name}</p>
+          {m.name}
         </Link>
       ))}
     </MenuContainer>

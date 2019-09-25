@@ -12,11 +12,11 @@ a:visited,
 a:active {
   text-decoration: none;
   color: #364cc7;
+  transition: 0.3s all ease;
 }
 
 a:hover {
   color: #0072ff;
-  text-decoration: underline;
 }
 
 h1,
@@ -44,4 +44,17 @@ h1 {
 a.btn:hover {
   background: #6772e5;
   color: white;
+}
+
+.head {
+    height: 3em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding:0  10%;
+}
+
+@media screen and (max-width: 768px) {
+
 }
