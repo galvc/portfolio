@@ -15,19 +15,6 @@ function Bio() {
         const { twitter, github, linkedin } = data.site.siteMetadata.social
         return (
           <BioLayout>
-            {/* <Image
-              fixed={data.avatar.childImageSharp.fixed}
-              alt={author}
-              style={{
-                marginRight: rhythm(1 / 2),
-                marginBottom: 0,
-                minWidth: 50,
-                borderRadius: `100%`,
-              }}
-              imgStyle={{
-                borderRadius: `50%`,
-              }}
-            /> */}
             <BioWrap>
               <strong>
                 <span class="highlight">{author}</span>
@@ -48,7 +35,6 @@ function Bio() {
                   <i class="fab fa-linkedin"></i>
                 </a>{" "}
               </section>
-              <br />
             </BioWrap>
           </BioLayout>
         )

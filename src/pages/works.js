@@ -3,8 +3,7 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
-import { ProjectContainer, Container } from "../styles/styles"
+import { ProjectContainer } from "../styles/styles"
 import PostCard from "../components/PostCard"
 
 class Works extends React.Component {

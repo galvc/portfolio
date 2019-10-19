@@ -25,11 +25,9 @@ export const BioContainer = styled(Container)`
 `
 
 export const ProjectContainer = styled.div`
-  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-auto-flow: row;
-  width: 90%;
 
   @media (max-width: 768px) {
     width: 100%;
@@ -46,8 +44,8 @@ export const BioWrap = styled.div`
     font-weight: 900;
   }
   .highlight {
-      display: block;
-      text-align: center;
+      font-weight: 600;
+      font-size: 1.4em;
     color: ${red};
   }
 
@@ -59,11 +57,20 @@ export const BioWrap = styled.div`
 
     a {
       padding: 0 0.5em;
+      opacity: 0.8;
+    }
+
+    a:hover {
+        opacity: 1;
     }
   }
 
   @media screen and (max-width: 768px) {
     font-size: 1.5em;
+
+    section.bio__social a {
+        opacity: 1;
+    }
   }
 `
 
@@ -97,9 +104,9 @@ export const PostContainer = styled.div`
     }
 
     .text__tag {
-      font-size: 0.9em;
+      font-size: 0.8em;
       text-transform: uppercase;
-      margin-bottom: 0.5em;
+        color: ${blue};
     }
 
     &:hover h2 {
@@ -134,25 +141,159 @@ export const ExtraLayout = styled.div`
   }
 `
 
+export const Header = styled.header`
+
+    background: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 10%;
+    box-sizing: border-box;
+    span.title {
+        font-size: 1.5em;
+    }
+
+     @media screen and (max-width: 768px) {
+         display: block;
+        padding: 1em;
+
+         span.title {
+
+         }
+    }
+`
+
 export const MenuContainer = styled.div`
-    width: 60%;
+  width: 40%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-end;
-  margin: 0;
-  text-transform: uppercase;
+  padding: 1.5em 0;
 
-  a {
-      color: initial;
-  }
+
+    a {
+        color: initial;
+        height: 100%;
+        padding: 0 2em;
+    }
+    a:hover {
+        background: ${slateblue};
+        color: white;
+    }
+
+    .menu {
+        list-style: none;
+        box-sizing: border-box;
+        overflow: hidden;
+        clear: none;
+        max-height: none;
+        display: flex;
+        margin: 0;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    menu li {
+        margin: 0;
+    }
+
+    .menu-icon, .menu-btn {
+        display: none;
+    }
+
+ @media screen and (max-width: 768px) {
+     display: inline;
+
+    .menu {
+        clear: both;
+        max-height: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        transition: max-height .75s ease-in-out;
+        display: block;
+        }
+        /* menu icon */
+        .menu-icon {
+            cursor: pointer;
+            display: inline-block;
+            float: right;
+            // margin: 1em;
+            padding: 1em;
+            position: relative;
+            user-select: none;
+            background: #fff;
+        }
+
+        .menu-icon .navicon {
+            background: black;
+            display: block;
+            height: 2px;
+            position: relative;
+            transition: background .2s ease-out;
+            width: 18px;
+        }
+
+        .menu-icon .navicon:before,
+        .menu-icon .navicon:after {
+            background: black;
+            content: '';
+            display: block;
+            height: 100%;
+            position: absolute;
+            transition: all .2s ease-out;
+            width: 100%;
+        }
+
+        .menu-icon .navicon:before {
+            top: 5px;
+        }
+
+        .menu-icon .navicon:after {
+            top: -5px;
+        }
+        /* menu btn */
+        .menu-btn {
+            display: none;
+        }
+
+        .menu-btn:checked ~ .menu {
+            max-height: 20em;
+            background:
+        }
+
+        .menu-btn:checked ~ .menu-icon .navicon {
+            background: transparent;
+        }
+
+        .menu-btn:checked ~ .menu-icon .navicon:before {
+            transform: rotate(-45deg);
+        }
+
+        .menu-btn:checked ~ .menu-icon .navicon:after {
+            transform: rotate(45deg);
+        }
+
+        .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+        .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+            top: 0;
+        }
+        }
 
 `
-export const Box = styled.div`
+export const WorkingOn = styled.div`
   background: ${slateblue};
-  margin-bottom: 1em;
+  margin: 1em 0;
   padding: 5%;
-
+  display: flex;
+	img {
+		width: 25%;
+		height: auto;
+		display: inline-block;
+		margin: 0.75em;
+	}
   h2,
   p {
     color: white;
@@ -160,6 +301,7 @@ export const Box = styled.div`
 
   p {
       margin: 0;
+    //   font-size: 1.2em;
   }
 
   a,

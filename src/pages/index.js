@@ -1,13 +1,11 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
-import Image from "gatsby-image"
+import { graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import PostCard from "../components/PostCard"
 import Extra from "../components/Extra"
 import BlogSection from "../components/BlogSection"
-import { Container, ProjectContainer, Box } from "../styles/styles"
+import { WorkingOn } from "../styles/styles"
 import "../styles/index.css"
 
 import pictograms from "./pictograms-small.png"
@@ -16,10 +14,9 @@ class BlogIndex extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
-    const posts = data.allMarkdownRemark.edges
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <Container>
+
           <Bio />
           <SEO
             title="All posts"
@@ -33,16 +30,11 @@ class BlogIndex extends React.Component {
               </div>
             ))}
           </ProjectContainer> */}
-          <Box>
+          <WorkingOn>
             <img
               src={pictograms}
-              style={{
-                width: "175px",
-                height: "auto",
-                display: "inline-block",
-                float: "right",
-                margin: ".75em"
-              }}
+              className="workingon__pictograms"
+              alt="pictograms icon"
             />
 
             <h2>Currently Working On 🗒️</h2>
@@ -60,10 +52,9 @@ class BlogIndex extends React.Component {
                 </a>
               </strong>
             </p>
-          </Box>
+          </WorkingOn>
           <BlogSection />
           <Extra />
-        </Container>
       </Layout>
     )
   }

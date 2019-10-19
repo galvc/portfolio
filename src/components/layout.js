@@ -1,8 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import Headroom from "react-headroom"
-import { rhythm, scale } from "../utils/typography"
-
+import { Container, Header } from "../styles/styles"
 import Menu from "./Menu"
 
 class Layout extends React.Component {
@@ -11,38 +10,34 @@ class Layout extends React.Component {
     let header
 
     header = (
-      <div class="head">
-        <span
-          style={{
-            ...scale(2 / 2.25),
-            fontWeight: "bold",
-            display:"inline-block",
-            color: "#1233ED",
-            width: "auto",
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
+      <Header>
+        <span className="title">
+            <Link
+                style={{
+                boxShadow: `none`,
+                textDecoration: `none`,
+                color: `inherit`,
+                }}
+                to={`/`}
+            >
+                {title}
+            </Link>
           </span>
         <Menu />
-      </div>
+      </Header>
     )
 
     return (
       <div>
         <Headroom>
-          <header>{header}</header>
+         {header}
         </Headroom>
 
-        <main>{children}</main>
+        <main>
+            <Container>
+            {children}
+            </Container>
+        </main>
         {/* <footer>
           © {new Date().getFullYear()}, Built with
           {` `}

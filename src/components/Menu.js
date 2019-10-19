@@ -25,11 +25,19 @@ const menuItems = [
 function Menu() {
   return (
     <MenuContainer>
-      {menuItems.map(m => (
-        <Link to={m.path}>
-          {m.name}
-        </Link>
-      ))}
+        <input class="menu-btn" id="menu-btn" type="checkbox" />
+            <label class="menu-icon" for="menu-btn">
+                <span class="navicon"></span>
+            </label>
+        <ul class="menu">
+        {menuItems.map((m, key) => (
+            <li id={key}>
+            <Link to={m.path}>
+            {m.name}
+            </Link>
+            </li>
+        ))}
+        </ul>
     </MenuContainer>
   )
 }

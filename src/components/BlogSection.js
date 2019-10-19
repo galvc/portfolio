@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React from "react"
 import { StaticQuery, graphql, Link } from "gatsby"
 import { BlogLayout } from "../styles/styles"
 
@@ -20,7 +20,7 @@ function BlogSection() {
                     {p.node.frontmatter.description}
                     <br />
                     <span style={{ textTransform: "uppercase" }}>
-                      Read More ➡️
+                      Read More <span role="img" aria-label="emoji of an arrow pointing right">➡️</span>
                     </span>
                   </p>
                 </Link>
