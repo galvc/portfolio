@@ -29,7 +29,7 @@ export const ProjectContainer = styled.div`
   grid-template-columns: repeat(2, 1fr);
   grid-auto-flow: row;
 
-  @media (max-width: 768px) {
+  @media (max-width: 768px) {g
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
@@ -179,8 +179,7 @@ export const MenuContainer = styled.div`
         padding: 0 2em;
     }
     a:hover {
-        background: ${slateblue};
-        color: white;
+        text-decoration: underline;
     }
 
     .menu {
@@ -285,14 +284,15 @@ export const MenuContainer = styled.div`
 `
 export const WorkingOn = styled.div`
   background: ${slateblue};
-  margin: 1em 0;
-  padding: 5%;
-  display: flex;
-	img {
-		width: 25%;
-		height: auto;
-		display: inline-block;
-		margin: 0.75em;
+  width: 60%;
+  margin: 1em auto;
+  padding: 1em 2em;
+  overflow: auto;
+  img {
+    width: 8rem;
+    height: auto;
+    float: left;
+    margin: 0 0.5em 0 0;
 	}
   h2,
   p {
@@ -300,8 +300,8 @@ export const WorkingOn = styled.div`
   }
 
   p {
+      display: inline-block;
       margin: 0;
-    //   font-size: 1.2em;
   }
 
   a,

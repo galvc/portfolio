@@ -17,7 +17,7 @@ class BlogIndex extends React.Component {
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
         <BioContainer>
-          <h1>Hi, I'm Chelsea</h1>
+          <h1>Chelsea Galvez</h1>
           I'm a web developer and designer. I work and thrive best at the
           intersection of design and technology. I seek to continuously improve
           myself and help lift others up.

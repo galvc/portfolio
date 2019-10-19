@@ -31,13 +31,12 @@ class BlogIndex extends React.Component {
             ))}
           </ProjectContainer> */}
           <WorkingOn>
+            <h2>Currently Working On 🗒️</h2>
             <img
               src={pictograms}
               className="workingon__pictograms"
               alt="pictograms icon"
             />
-
-            <h2>Currently Working On 🗒️</h2>
             <p>
               Pictograms are customizable illustrations for your marketing
               emails and newsletters.
@@ -52,6 +51,7 @@ class BlogIndex extends React.Component {
                 </a>
               </strong>
             </p>
+
           </WorkingOn>
           <BlogSection />
           <Extra />
