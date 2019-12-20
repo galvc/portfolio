@@ -22,14 +22,6 @@ class BlogIndex extends React.Component {
             title="All posts"
             keywords={[`blog`, `gatsby`, `javascript`, `react`]}
           />
-          {/* <h1>Projects</h1>
-          <ProjectContainer>
-            {posts.map(p => (
-              <div key={p.node.fields.slug}>
-                <PostCard data={p.node} />
-              </div>
-            ))}
-          </ProjectContainer> */}
           <WorkingOn>
             <h2>Currently Working On 🗒️</h2>
             <img

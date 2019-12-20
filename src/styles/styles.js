@@ -300,7 +300,6 @@ export const WorkingOn = styled.div`
   }
 
   p {
-      display: inline-block;
       margin: 0;
   }
 
@@ -308,5 +307,10 @@ export const WorkingOn = styled.div`
   a:visited {
     color: white;
     text-decoration: underline;
+  }
+
+  @media screen and (max-width: 968px) {
+      width: 100%;
+      padding: 1em;
   }
 `
