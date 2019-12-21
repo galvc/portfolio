@@ -21,8 +21,8 @@ function PostCard({ data }) {
             }}
           />
           <span className="card__details">
+            <span class="text__tag">{tag}</span>
             <h2>{title}</h2>
-            <p class="text__tag">{tag}</p>
             <p class="text__desc">{description}</p>
           </span>
         </div>

@@ -14,19 +14,6 @@ const typography = new Typography({
   bodyFontFamily: ["Poppins", "Montserrat", "serif"],
 })
 
-// Github.overrideThemeStyles = () => {
-//   return {
-//     "a, a:hover": {
-//       textDecoration: "none",
-//     },
-//     "h1, h2, h3, h4": {
-//       borderBottom: "none",
-//       fontWeight: "normal",
-//     },
-//   }
-// }
-
-// const typography = new Typography(Github)
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== `production`) {

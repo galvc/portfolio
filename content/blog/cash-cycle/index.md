@@ -4,7 +4,7 @@ author: Chelsea Galvez
 featuredImage: "./cashcycle-team.jpg"
 date: "2018-07-22"
 description: "Runner-up for Angel Hack Seattle Code for A Cause challenge (2018). Prototype for a bike-sharing 'cleanup' solution."
-category: "project"
+category: "blog"
 tag: "Front end development"
 ---
 

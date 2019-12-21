@@ -12,11 +12,11 @@ a:visited,
 a:active {
   text-decoration: none;
   color: #364cc7;
+  transition: 0.3s all ease;
 }
 
 a:hover {
   color: #0072ff;
-  text-decoration: underline;
 }
 
 h1,
@@ -27,8 +27,18 @@ h3 {
 }
 
 h1 {
-  font-weight: 400;
+  font-weight: 300;
+  font-size: 2.2em;
   color: #848189;
+}
+
+
+@media screen and (max-width: 768px) {
+    header{
+        display: inline-block;
+        width: 100%;
+    }
+
 }
 
 .btn {
@@ -44,4 +54,18 @@ h1 {
 a.btn:hover {
   background: #6772e5;
   color: white;
+}
+
+.head {
+
+}
+
+.head span {
+    font-weight: 600;
+    font-size: 1.3em;
+    color: #364cc7;
+}
+
+@media screen and (max-width: 768px) {
+
 }

@@ -1,8 +1,8 @@
-import React, { Component } from "react"
+import React from "react"
 import { StaticQuery, graphql, Link } from "gatsby"
 import { BlogLayout } from "../styles/styles"
 
-function Blog() {
+function BlogSection() {
   return (
     <StaticQuery
       query={blogQuery}
@@ -20,7 +20,7 @@ function Blog() {
                     {p.node.frontmatter.description}
                     <br />
                     <span style={{ textTransform: "uppercase" }}>
-                      Read More ➡️
+                      Read More <span role="img" aria-label="emoji of an arrow pointing right">➡️</span>
                     </span>
                   </p>
                 </Link>
@@ -36,7 +36,7 @@ function Blog() {
 export const blogQuery = graphql`
   query blogQuery {
     allMarkdownRemark(
-      filter: { frontmatter: { category: { eq: "research" } } }
+      filter: { frontmatter: { category: { eq: "blog" } } }
     ) {
       edges {
         node {
@@ -56,4 +56,4 @@ export const blogQuery = graphql`
     }
   }
 `
-export default Blog
+export default BlogSection

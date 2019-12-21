@@ -15,22 +15,9 @@ function Bio() {
         const { twitter, github, linkedin } = data.site.siteMetadata.social
         return (
           <BioLayout>
-            {/* <Image
-              fixed={data.avatar.childImageSharp.fixed}
-              alt={author}
-              style={{
-                marginRight: rhythm(1 / 2),
-                marginBottom: 0,
-                minWidth: 50,
-                borderRadius: `100%`,
-              }}
-              imgStyle={{
-                borderRadius: `50%`,
-              }}
-            /> */}
             <BioWrap>
               <strong>
-                Hi! My name is <span class="highlight">{author}</span>.
+                <span class="highlight">{author}</span>
               </strong>
               <br />
               I work as a Web Designer and Developer, aiming to create
@@ -48,7 +35,6 @@ function Bio() {
                   <i class="fab fa-linkedin"></i>
                 </a>{" "}
               </section>
-              <br />
             </BioWrap>
           </BioLayout>
         )
