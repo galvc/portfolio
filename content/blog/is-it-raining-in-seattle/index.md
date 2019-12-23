@@ -32,3 +32,12 @@ Learning asynchronous events and promises seem easy when learning through concep
 It's also important to read each API's documentation and terms of use carefully. Unsplash, for example, has very specific rules for crediting back.
 
 Navigating API documentation and async processes were my biggest learning experiences with this project.
+
+#Feedback and Mistakes
+During an interview session, I received feedback on the state of the website. 
+Here are the important things I learned and fixed:
+- The order of methods were not properly called, which rendered the website useless. 
+- Using ES6 to shorten the length of code and make it more readable
+- There are certain fonts that do not properly render on a Mac vs Windows, the font has since been fixed using a web safe font family.
+- I updated the photos that will display when it is actually raining
+- I added an error handler for any API request error

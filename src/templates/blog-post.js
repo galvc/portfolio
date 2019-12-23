@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -34,7 +34,6 @@ class BlogPostTemplate extends React.Component {
             >
               {post.frontmatter.title}
             </h1>
-            {/* <ShortBio post={post} /> */}
             <br />
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
             <hr
@@ -42,10 +41,9 @@ class BlogPostTemplate extends React.Component {
                 marginBottom: rhythm(1),
               }}
             />
-            {/* <Bio /> */}
+            <Link to="/works">Back to Works page</Link>
           </div>
         </div>
-        <br />
         <div
           style={{
             backgroundColor: "#fafafa",
@@ -56,17 +54,6 @@ class BlogPostTemplate extends React.Component {
             padding: rhythm(1.5),
           }}
         >
-          {/* <RecentPosts /> */}
-          <br />
-          <br />
-          <div
-            style={{
-              display: "flex",
-              width: "100%",
-              flexDirection: "column",
-              maxWidth: maxWidth,
-            }}
-          ></div>
         </div>
       </Layout>
     )

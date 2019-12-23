@@ -23,3 +23,11 @@ There was a steep learning curve to DNN, especially as I had very little experie
 
 #Learnings
 Unfortunately, due to the private nature of an intranet, I cannot publish my works. My learnings were numerous, however.
+- Soft skills and learning to ask for feedback
+- Managing feedback and knowing which to prioritize
+- Time management when it comes to coding your own module vs buying a pre-made module
+- Combining modules of third-party developers is ... difficult
+- Consider the size and support of the community managing and participating in the development of a service
+- Documentation is a MUST. For developers of the service and internal maintenance
+- Projects must be backed by an active sponsor and maintained regularly
+- Intranets are important for making data available to everybody completely and timely
