@@ -4,7 +4,7 @@ import { StaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 import { BioLayout, BioWrap } from "../styles/styles"
 import "../styles/index.css"
-import { FaLinkedin, FaGithub, FaTwitterSquare } from "react-icons/fa"
+import { FaLinkedin, FaGithub, FaTwitterSquare, FaBehanceSquare } from "react-icons/fa"
 
 function Bio() {
   return (
@@ -24,16 +24,19 @@ function Bio() {
               meaningful projects and user experiences.
               <br />
               <section className="bio__social">
-                <a href={`https://twitter.com/${twitter}`}>
+                <a href={`https://twitter.com/${twitter}`} target="_blank">
                   <FaTwitterSquare />
                 </a>{" "}
-                <a href={`https://github.com/${github}`}>
+                <a href={`https://github.com/${github}`} target="_blank">
                   <FaGithub />
                 </a>{" "}
-                <a href={`https://linkedin.com/in/${linkedin}`}>
+                <a href={`https://linkedin.com/in/${linkedin}`} target="_blank">
                   <FaLinkedin />
                   <i class="fab fa-linkedin"></i>
                 </a>{" "}
+                <a href="https://www.behance.net/chelseagalv" target="_blank">
+                  <FaBehanceSquare />
+                </a>
               </section>
             </BioWrap>
           </BioLayout>

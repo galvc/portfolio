@@ -16,10 +16,10 @@ const menuItems = [
     name: "Works",
     path: "/works",
   },
-  {
-    name: "Blog",
-    path: "/blog",
-  },
+//   {
+//     name: "Blog",
+//     path: "/blog",
+//   },
 ]
 
 function Menu() {

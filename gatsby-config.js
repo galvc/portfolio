@@ -1,13 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Chelsea G`,
+    title: `Chelsea Galvez`,
     author: `Chelsea Galvez`,
-    description: `Works and thoughts by Chelsea`,
-    siteUrl: `https://eloquent-knuth-1af701.netlify.com`,
+    description: `Chelsea Galvez Portfolio`,
+    siteUrl: `https://chelseagalvez.com`,
     social: {
       twitter: `chelseatheuser`,
       github: `galvc`,
       linkedin: `galvc`,
+      behance: `chelseagalv`
     },
   },
   plugins: [
