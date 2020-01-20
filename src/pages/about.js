@@ -27,7 +27,7 @@ class BlogIndex extends React.Component {
           <p />
           <a
             class="btn"
-            href="https://drive.google.com/file/d/1WP1SeaUJU2iZEi-bf8cr0Xx0Ns1Fm6Vw/view"
+            href="https://drive.google.com/open?id=1RMLXHvLVR4gTvMDSObKyMQF5I3fyvJlT"
           >
             Download my resume
           </a>
