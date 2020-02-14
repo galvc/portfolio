@@ -11,7 +11,7 @@ function BlogSection() {
 
         return (
           <BlogLayout>
-            <h1>Blog</h1>
+            <h1>Works &amp; Research</h1>
             {posts.map(p => (
               <div>
                 <Link to={p.node.fields.slug}>

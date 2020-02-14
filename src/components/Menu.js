@@ -18,7 +18,7 @@ const menuItems = [
   },
 //   {
 //     name: "Blog",
-//     path: "/blog",
+//     path: "https://byte-sized.netlify.com/",
 //   },
 ]
 
@@ -35,6 +35,9 @@ function Menu() {
             <Link to={m.path}>{m.name}</Link>
           </li>
         ))}
+        <li>
+            <a href="https://byte-sized.netlify.com/" target="_blank" title="This link will take you to an external webpage">Blog</a>
+        </li>
       </ul>
     </MenuContainer>
   )

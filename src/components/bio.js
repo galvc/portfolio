@@ -16,9 +16,9 @@ function Bio() {
         return (
           <BioLayout>
             <BioWrap>
-              <strong>
+              {/* <strong>
                 <span class="highlight">{author}</span>
-              </strong>
+              </strong> */}
               <br />
               I work as a Web Designer and Developer, aiming to create
               meaningful projects and user experiences.
